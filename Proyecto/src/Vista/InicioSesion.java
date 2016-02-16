@@ -57,6 +57,11 @@ public class InicioSesion extends javax.swing.JFrame {
         jbtningresar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jbtningresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/accept.png"))); // NOI18N
         jbtningresar.setText("ACEPTAR");
+        jbtningresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtningresarActionPerformed(evt);
+            }
+        });
 
         jbtcancelar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jbtcancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cross.png"))); // NOI18N
@@ -122,6 +127,10 @@ public class InicioSesion extends javax.swing.JFrame {
           x.setVisible(true);
           this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jbtcancelarActionPerformed
+
+    private void jbtningresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtningresarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtningresarActionPerformed
 
     /**
      * @param args the command line arguments
