@@ -1,11 +1,13 @@
 /*
- * Andres Caina
- * Julio Sanaguano 
- * Thalia Veloz
- * Daniel Caceres
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Vista;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.*;
 /**
  *
  * @author Usuario
@@ -13,10 +15,15 @@ package Vista;
 public class Menu extends javax.swing.JFrame {
 
     /**
-     * Creates new form Clientes
+     * Creates new form Menu
      */
     public Menu() {
-        initComponents();
+         initComponents();
+         //setImagen("/Imagenes/SilverLight.png");
+        setLocationRelativeTo(null);
+        
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/money.png")); setIconImage(icon);
+    
     }
 
     /**
@@ -28,43 +35,82 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        JMiniciarsesion = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        JMenusalir = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenuBar1.add(jMenu5);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Menu.jpg"))); // NOI18N
 
-        jMenu3.setText("Cliente");
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Archivo.png"))); // NOI18N
+        jMenu1.setText("ARCHIVO");
+        jMenu1.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
-        jMenuItem1.setText("Insertar");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        JMiniciarsesion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JMiniciarsesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/connect.png"))); // NOI18N
+        JMiniciarsesion.setText("INICIAR SESIÒN");
+        JMiniciarsesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                JMiniciarsesionActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem1);
+        jMenu1.add(JMiniciarsesion);
 
-        jMenuItem2.setText("Modificar");
+        jMenuItem4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disconnect.png"))); // NOI18N
+        jMenuItem4.setText("CERRAR SESIÒN");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
+        jMenuItem2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/group_add.png"))); // NOI18N
+        jMenuItem2.setText("REGISTRO USUARIO");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        jMenu1.add(jMenuItem2);
 
-        jMenuItem3.setText("Eliminar");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        JMenusalir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        JMenusalir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JMenusalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/door_in.png"))); // NOI18N
+        JMenusalir.setText("SALIR APLICACIÒN");
+        JMenusalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                JMenusalirActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem3);
+        jMenu1.add(JMenusalir);
 
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/group.png"))); // NOI18N
+        jMenu2.setText("CLIENTES");
+        jMenu2.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jMenuItem3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/group_add.png"))); // NOI18N
+        jMenuItem3.setText("jMenuItem3");
+        jMenu2.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pagos.png"))); // NOI18N
+        jMenu3.setText("PRESTAMOS");
+        jMenu3.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -73,33 +119,45 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 484, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 228, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Menu.this.dispose();
-        Cliente_Insertar vista = new Cliente_Insertar();
-        vista.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Menu.this.dispose();
-        Cliente_Modificar vista = new Cliente_Modificar();
-        vista.setVisible(true);        
+        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-            Menu.this.dispose();
-        Cliente_Eliminar vista = new Cliente_Eliminar();
-        vista.setVisible(true); 
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void JMenusalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMenusalirActionPerformed
+        // TODO add your handling code here
+         int slir = JOptionPane.showConfirmDialog(this, "REALMENTE DESEA CERRAR LA APLICACION","CERRANDO APLICACION",0,3);
+        if(slir==JOptionPane.OK_OPTION)
+        {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_JMenusalirActionPerformed
+
+    private void JMiniciarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMiniciarsesionActionPerformed
+        // TODO add your handling code here:
+          InicioSesion sesion=new InicioSesion(null, true);
+          sesion.setVisible(true);
+          this.dispose();
+         this.JMiniciarsesion.getModel().setEnabled(true);
+    }//GEN-LAST:event_JMiniciarsesionActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    this. JMiniciarsesion.getModel().setEnabled(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,11 +196,15 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem JMenusalir;
+    private javax.swing.JMenuItem JMiniciarsesion;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
