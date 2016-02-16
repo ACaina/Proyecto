@@ -173,6 +173,11 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acerca de.png"))); // NOI18N
         jMenuItem9.setText("ACERCA DE");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem9);
 
         jMenuBar1.add(jMenu5);
@@ -228,6 +233,30 @@ public class Menu extends javax.swing.JFrame {
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        JOptionPane.showMessageDialog(this,
+                                "          ''UNIVERSIDAD NACIONAL DE CHIMBORAZO''" +
+                             //   "\n                                              "+
+                                "\n                        FACULTAD DE INGENIERIA "+
+                               // "\n                                              "+
+                                "\n               ESCUELA DE SISTEMAS Y COMPUTACION"+
+                                         "\n                                              "+
+                                "\n                   '' PROYECTO DE PROGRAMACION ''"+
+                                        "\n                                              "+
+                                "\n   INTEGRANTES:"+
+                                          "\n                                              "+
+                                "\n THALIA VELOZ"+
+                                "\n DANNY CACERES"+
+                                "\n ANDRES CAINA"+
+                                "\n JULIO SANAGUANO"+
+                                        "\n                                              "+
+                                        "\n                                              "+
+                                " TUTORA:"+
+                                        "ING.MARGARITA AUCANCELA", 
+                                "ACERCA DE...",
+                                JOptionPane.INFORMATION_MESSAGE);// TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     /**
      * @param args the command line arguments
